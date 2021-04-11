@@ -1,21 +1,16 @@
+import react, { useState, useEffect } from 'react';
+import 'antd/dist/antd.css';
+import Form from './Form';
+import Display from './Display';
 import './App.css';
 
 function App() {
+  const [text, setText] = useState('');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form text={text} setText={setText} />
+      <Display text={text} />
     </div>
   );
 }
