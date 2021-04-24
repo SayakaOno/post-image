@@ -4,7 +4,11 @@ import './App.css';
 const { TextArea } = Input;
 
 const Form = ({ text, setText }) => {
-  const onClick = () => {
+  const onClear = () => {
+    setText('');
+  };
+
+  const onComplete = () => {
     // scroll to the display
   };
 
@@ -16,7 +20,10 @@ const Form = ({ text, setText }) => {
         value={text}
         onChange={e => setText(e.target.value)}
       />
-      <Button onClick={onClick}>Done</Button>
+      <div className="form__buttons">
+        <Button onClick={onClear}>Clear</Button>
+        <Button onClick={onComplete}>Done</Button>
+      </div>
     </div>
   );
 };
