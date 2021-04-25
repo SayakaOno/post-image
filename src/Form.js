@@ -9,7 +9,7 @@ const Form = ({ text, setText }) => {
   };
 
   const onComplete = () => {
-    // scroll to the display
+    document.querySelector('.display').scrollIntoView();
   };
 
   return (
